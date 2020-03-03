@@ -66,7 +66,9 @@
 		});
 		
 		ESX_MENU.render();
-		$('#menu_' + namespace + '_' + name).find('.menu-item.selected')[0].scrollIntoView();
+		if ($('#menu_' + namespace + '_' + name) != null && $('#menu_' + namespace + '_' + name).find('.menu-item.selected')[0] != null) {
+			$('#menu_' + namespace + '_' + name).find('.menu-item.selected')[0].scrollIntoView();
+		}
 	};
 
 	ESX_MENU.close = function(namespace, name) {
